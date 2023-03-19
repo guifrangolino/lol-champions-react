@@ -9,7 +9,7 @@ function Details() {
   const [campeao, setCampeao] = useState({})
 
   useEffect(() => {
-    fetch(`http://ddragon.leagueoflegends.com/cdn/13.5.1/data/pt_BR/champion/${id}.json`)
+    fetch(`https://ddragon.leagueoflegends.com/cdn/13.5.1/data/pt_BR/champion/${id}.json`)
       .then(response => response.json())
       .then(data => {
         
@@ -31,7 +31,7 @@ function Details() {
   return (
     <Container>
       <div className="campeao">
-        <img src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${campeao.id}_0.jpg`} alt={campeao.title} />
+        <img src={`https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${campeao.id}_0.jpg`} alt={campeao.title} />
         <div className="detalhes">
           <h1>{campeao.name}</h1>
           <span>{campeao.lore}</span>

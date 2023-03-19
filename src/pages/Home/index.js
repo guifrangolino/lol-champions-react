@@ -7,7 +7,7 @@ function Home() {
   const [campeoes, setCampeoes] = useState([])
 
   useEffect(() => {
-    fetch('http://ddragon.leagueoflegends.com/cdn/13.5.1/data/pt_BR/champion.json')
+    fetch('https://ddragon.leagueoflegends.com/cdn/13.5.1/data/pt_BR/champion.json')
       .then(response => response.json())
       .then(data => {
         const results = []
@@ -38,7 +38,7 @@ function Home() {
               <Champ key={champ.id}>
                 <Link to={`/details/${champ.id}`}>
                   <img 
-                  src={`http://ddragon.leagueoflegends.com/cdn/img/champion/centered/FiddleSticks_0.jpg`} 
+                  src={`https://ddragon.leagueoflegends.com/cdn/img/champion/centered/FiddleSticks_0.jpg`} 
                   alt={champ.title} />
                   <span>{champ.name}</span>
                 </Link>
@@ -50,7 +50,7 @@ function Home() {
             <Champ key={champ.id}>
               <Link to={`/details/${champ.id}`}>
                 <img 
-                src={`http://ddragon.leagueoflegends.com/cdn/img/champion/centered/${champ.id}_0.jpg`} 
+                src={`https://ddragon.leagueoflegends.com/cdn/img/champion/centered/${champ.id}_0.jpg`} 
                 alt={champ.title} />
                 <span>{champ.name}</span>
               </Link>
