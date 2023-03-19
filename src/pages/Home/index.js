@@ -28,7 +28,7 @@ function Home() {
 
   return (
     <Container>
-      <h1>A Aline terminou, Viva!</h1>
+      <h1>Campeões LOL</h1>
       <input type="text" value={busca} onChange={e => setBuca(e.target.value)} />
       <ChampsContainer>
         {campeoesFiltrados.map(champ => {
