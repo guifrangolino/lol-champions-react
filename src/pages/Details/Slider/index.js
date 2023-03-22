@@ -23,7 +23,6 @@ function SkinsSlider({ id }) {
           id
         }
 
-        // console.log(campeaoSkins)
         if (id === 'Fiddlesticks') {
           campeaoSkins.id = 'FiddleSticks'
         }
@@ -63,9 +62,3 @@ function SkinsSlider({ id }) {
 }
 
 export default SkinsSlider
-
-// campeaoSkins.map(skin => {
-//   return (
-//     <img key={skin.id} src={`https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${id}_${skin.num}.jpg`} alt={skin.name} />
-//   )
-// })

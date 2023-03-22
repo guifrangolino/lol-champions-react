@@ -43,7 +43,6 @@ function Details() {
           }
         }
 
-        // console.log(typeof(campeao.habilidades.wDesc))
         setCampeao(campeao)
         setHabName(campeao.passiva && campeao.passiva.name ? campeao.passiva.name : 'Carregando...')
         setHabDesc(campeao.passiva && campeao.passiva.desc ? campeao.passiva.desc : 'Carregando...')
@@ -94,7 +93,6 @@ function Details() {
   return (
     <Container>
       <div className="campeao">
-        {/* <img src={campeao && campeao.id ? `https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${campeao.id}_0.jpg` : singedGif} alt={campeao.title} /> */}
         <SkinsSlider id={id} />
         <div className="detalhes">
           <h1>{campeao.name}</h1>
