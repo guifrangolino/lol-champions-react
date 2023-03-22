@@ -1,0 +1,17 @@
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-slide span {
+  position: absolute;
+  bottom: 25px;
+  background: black;
+  padding: 5px;
+}
+
+@media (max-width: 768px) {
+  .swiper-slide span {
+    width: 60%;
+  }
+}

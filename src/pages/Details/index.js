@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { Link, useParams } from "react-router-dom"
 import { Container, ContainerHabilidadesDescs, ContainerHabilidadesIcons } from "./style"
 import singedGif from '../../assets/singed.gif'
+import SkinsSlider from "./Slider"
 
 function Details() {
 
@@ -85,7 +86,7 @@ function Details() {
 
   const active = {
     outline: '1px solid white',
-    'outline-offset': '5px',
+    outlineOffset: '5px',
     transition: 'all .3s'
   }
   const inactive = {}
@@ -93,7 +94,8 @@ function Details() {
   return (
     <Container>
       <div className="campeao">
-        <img src={campeao && campeao.id ? `https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${campeao.id}_0.jpg` : singedGif} alt={campeao.title} />
+        {/* <img src={campeao && campeao.id ? `https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${campeao.id}_0.jpg` : singedGif} alt={campeao.title} /> */}
+        <SkinsSlider id={id} />
         <div className="detalhes">
           <h1>{campeao.name}</h1>
           <span>{campeao.lore}</span>
@@ -112,26 +114,6 @@ function Details() {
               <span>{habName}</span>
               <p>{habDesc}</p>
             </li>
-            {/* <li>
-              <span>{campeao.passiva && campeao.passiva.name ? campeao.passiva.name : 'Carregando...'}</span>
-              <p>{campeao.passiva && campeao.passiva.desc ? campeao.passiva.desc : 'Carregando...'}</p>
-            </li>
-            <li>
-              <span>{campeao.habilidades && campeao.habilidades.qName ? campeao.habilidades.qName : 'Carregando...'}</span>
-              <p>{campeao.habilidades && campeao.habilidades.qDesc ? campeao.habilidades.qDesc : 'Carregando...'}</p>
-            </li>
-            <li>
-              <span>{campeao.habilidades && campeao.habilidades.wName ? campeao.habilidades.wName : 'Carregando...'}</span>
-              <p>{campeao.habilidades && campeao.habilidades.wDesc ? campeao.habilidades.wDesc : 'Carregando...'}</p>
-            </li>
-            <li>
-              <span>{campeao.habilidades && campeao.habilidades.eName ? campeao.habilidades.eName : 'Carregando...'}</span>
-              <p>{campeao.habilidades && campeao.habilidades.eDesc ? campeao.habilidades.eDesc : 'Carregando...'}</p>
-            </li>
-            <li>
-              <span>{campeao.habilidades && campeao.habilidades.rName ? campeao.habilidades.rName : 'Carregando...'}</span>
-              <p>{campeao.habilidades && campeao.habilidades.rDesc ? campeao.habilidades.rDesc : 'Carregando...'}</p>
-            </li> */}
           </ContainerHabilidadesDescs>
           <Link to='/'><button>Voltar</button></Link>
         </div>
