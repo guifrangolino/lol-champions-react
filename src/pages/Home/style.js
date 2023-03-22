@@ -59,7 +59,7 @@ export const Champ = styled.li`
     align-items: center;
   }
 
-  :hover{
+  &:hover{
     transform: scale(1.05);
     outline: 1px solid white;
 
@@ -73,7 +73,8 @@ export const Champ = styled.li`
     width: 100%;
     height: 250px;
     object-fit: cover;
-    border-radius: 3%;
+    border-bottom-right-radius: 3%;
+    border-bottom-left-radius: 3%;
   }
 
 `
