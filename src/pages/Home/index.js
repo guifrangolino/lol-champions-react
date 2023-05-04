@@ -7,7 +7,7 @@ function Home() {
   const [campeoes, setCampeoes] = useState([])
 
   useEffect(() => {
-    fetch('https://ddragon.leagueoflegends.com/cdn/13.5.1/data/pt_BR/champion.json')
+    fetch('https://ddragon.leagueoflegends.com/cdn/13.9.1/data/pt_BR/champion.json')
       .then(response => response.json())
       .then(data => {
         const results = []
