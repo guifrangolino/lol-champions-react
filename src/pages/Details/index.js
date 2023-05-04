@@ -11,7 +11,7 @@ function Details() {
   const [campeao, setCampeao] = useState({})
 
   useEffect(() => {
-    fetch(`https://ddragon.leagueoflegends.com/cdn/13.5.1/data/pt_BR/champion/${id}.json`)
+    fetch(`https://ddragon.leagueoflegends.com/cdn/13.9.1/data/pt_BR/champion/${id}.json`)
       .then(response => response.json())
       .then(data => {
         
@@ -25,21 +25,21 @@ function Details() {
           passiva: {
             name: passive.name,
             desc: passive.description,
-            image: `https://ddragon.leagueoflegends.com/cdn/13.5.1/img/passive/${passive.image.full}`
+            image: `https://ddragon.leagueoflegends.com/cdn/13.9.1/img/passive/${passive.image.full}`
           },
           habilidades: {
             qName: spells[0].name,
             qDesc: spells[0].description,
-            qImage: `https://ddragon.leagueoflegends.com/cdn/13.5.1/img/spell/${spells[0].image.full}`,
+            qImage: `https://ddragon.leagueoflegends.com/cdn/13.9.1/img/spell/${spells[0].image.full}`,
             wName: spells[1].name,
             wDesc: spells[1].description,
-            wImage: `https://ddragon.leagueoflegends.com/cdn/13.5.1/img/spell/${spells[1].image.full}`,
+            wImage: `https://ddragon.leagueoflegends.com/cdn/13.9.1/img/spell/${spells[1].image.full}`,
             eName: spells[2].name,
             eDesc: spells[2].description,
-            eImage: `https://ddragon.leagueoflegends.com/cdn/13.5.1/img/spell/${spells[2].image.full}`,
+            eImage: `https://ddragon.leagueoflegends.com/cdn/13.9.1/img/spell/${spells[2].image.full}`,
             rName: spells[3].name,
             rDesc: spells[3].description,
-            rImage: `https://ddragon.leagueoflegends.com/cdn/13.5.1/img/spell/${spells[3].image.full}`,
+            rImage: `https://ddragon.leagueoflegends.com/cdn/13.9.1/img/spell/${spells[3].image.full}`,
           }
         }
 
